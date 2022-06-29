@@ -1,22 +1,19 @@
 interface IProduct {
-    id: number;
     name: string;
     category: string;
 }
 
 const sweets: IProduct[] = [{
-    id: 1,
     name: 'ice-cream',
     category: 'food'
   },
   {
-    id: 2,
     name: 'cake',
     category: 'food'
   }];
 
 
-function updateObjectInArray<ObjectShape>(initialArray: ObjectShape[], key: string, value, patch: Partial<ObjectShape>): ObjectShape[] {
+function updateObjectInArray<ObjectShape>(initialArray: ObjectShape[], key: string, value: string, patch: Partial<ObjectShape>): ObjectShape[] {
     let clonedArray  = [...initialArray];
     
     clonedArray.forEach(item => {
@@ -30,4 +27,4 @@ function updateObjectInArray<ObjectShape>(initialArray: ObjectShape[], key: stri
     return clonedArray;
 }
 
-console.log(updateObjectInArray<IProduct>(sweets, 'id', 2, { name:'cupcake'}));
+console.log(updateObjectInArray<IProduct>(sweets, 'name', 'cake', { name:'cupcake'}));

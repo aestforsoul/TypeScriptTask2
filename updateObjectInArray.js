@@ -8,12 +8,10 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     return to.concat(ar || Array.prototype.slice.call(from));
 };
 var sweets = [{
-        id: 1,
         name: 'ice-cream',
         category: 'food'
     },
     {
-        id: 2,
         name: 'cake',
         category: 'food'
     }];
@@ -28,4 +26,4 @@ function updateObjectInArray(initialArray, key, value, patch) {
     });
     return clonedArray;
 }
-console.log(updateObjectInArray(sweets, 'id', 2, { name: 'cupcake' }));
+console.log(updateObjectInArray(sweets, 'name', 'cake', { name: 'cupcake' }));
