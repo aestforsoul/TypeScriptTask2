@@ -7,14 +7,16 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
-var sweets = [{
-        name: 'ice-cream',
-        category: 'food'
+var sweets = [
+    {
+        name: "ice-cream",
+        category: "food"
     },
     {
-        name: 'cake',
-        category: 'food'
-    }];
+        name: "cake",
+        category: "food"
+    },
+];
 function updateObjectInArray(initialArray, key, value, patch) {
     var clonedArray = __spreadArray([], initialArray, true);
     clonedArray.forEach(function (item) {
@@ -26,4 +28,4 @@ function updateObjectInArray(initialArray, key, value, patch) {
     });
     return clonedArray;
 }
-console.log(updateObjectInArray(sweets, 'name', 'cake', { name: 'cupcake' }));
+console.log(updateObjectInArray(sweets, "name", "cake", { name: "cupcake" }));
